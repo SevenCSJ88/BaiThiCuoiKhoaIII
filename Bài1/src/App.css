@@ -1,0 +1,149 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.todo-list {
+  width: 500px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+  margin: 32px ;
+}
+
+.todo-list header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cccccc73;
+  overflow: hidden;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  font-size: 16px;
+}
+
+.todo-list header span {
+  display: block;
+  padding: 6px 8px;
+  font-weight: bold;
+}
+
+.todo-list header .btn-finish {
+  background-color: #69bd69;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.list-todo {
+  min-height: 200px;
+  padding: 12px;
+}
+
+.list-todo .item {
+  padding: 8px 4px;
+  border-bottom: 1px solid #cccccc73;
+  color: #787878fc;
+}
+
+.enter-todo {
+  display: flex;
+  padding: 12px 8px;
+  gap: 8px;
+}
+
+.enter-todo .txt-todo {
+  width: 80%;
+  border: none;
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.enter-todo .btn-submit {
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #ccc;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.text-date {
+  font-size: 12px;
+}
+
+::placeholder {
+  color: #787878fc;
+  font-size: 18px;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
